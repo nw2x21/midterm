@@ -12,12 +12,26 @@ You can assume that the 2nd number passed in will always be greater than the fir
 Note: This problem should account for negative number input
 */
 
-function sumOfOdds(){
-
+function sumOfOdds(n){
+    
+    return Boolean(n % 2);
 }
 
+function findSum(no){
+    let sum=0;
+
+    for(let i = 0; i < no; i++){
+        if(sumOfOdds(i)){
+            sum+=i;
+        }
+    }
+    return sum;
+}
+
+console.log(findSum(50));
+
 /* console.logs to test */
-console.log("sumOfOdds");
+
 console.log("////////////////////////////////////////////////////////////////////////////\n");
 //Add console.logs here to test!  Feel free to format this section however you like
 
@@ -31,11 +45,15 @@ You can assume the arrays that are being input are of the same length
 */
 
 function arraySubtract(){
-
-}
+    let array1 = [11, 12, 13, 14, 15];
+    let array2 = [21, 22, 23, 24, 25];
+    let answer = [];
+        
+    for(let i = 0;i<=b.length-1;i++)
+    answer.push(array1[i] - array2[i]);  
 
 /* console.logs to test */
-console.log("arraySubtract");
+console.log(answer)
 console.log("////////////////////////////////////////////////////////////////////////////\n");
 //Add console.logs here to test!  Feel free to format this section however you like
 
@@ -103,8 +121,13 @@ If it is not, return false.
 */
 
 function divisibleBy4And7(){
-
+    if(num % 4 === 0 && num % 7 === 0){
+        return true
+    }else {
+        return false
+    }
 }
+let num = 28
 
 /* console.logs to test */
 console.log("divisibleBy4And7");
@@ -186,4 +209,3 @@ console.log("///////////////////////////////////////////////////////////////////
 //Add console.logs here to test!  Feel free to format this section however you like
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
-
